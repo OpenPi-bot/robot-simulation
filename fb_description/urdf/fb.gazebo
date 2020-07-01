@@ -54,7 +54,16 @@
     <broadcastTF>false</broadcastTF>
   </plugin>
 </gazebo>
-
+ <gazebo>
+    <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
+      <alwaysOn>true</alwaysOn>
+      <bodyName>chassis</bodyName>
+      <topicName>imu</topicName>
+      <serviceName>imu_service</serviceName>
+      <gaussianNoise>0.0</gaussianNoise>
+      <updateRate>20.0</updateRate>
+    </plugin>
+  </gazebo>
  <gazebo reference="chassis">
       <material>Gazebo/Blue</material>
     </gazebo>
