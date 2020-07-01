@@ -85,6 +85,27 @@
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0"      izz="1e-6" />
     </inertial>
 </link>
+  <link name="imu_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </collision>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0"      izz="1e-6" />
+    </inertial>
+</link>
+ 
+ 
   <link name="right_wheel">
     <!--origin xyz="0.1 -0.13 0.1" rpy="0 1.5707 1.5707"/-->
     <collision name="collision">
@@ -163,6 +184,13 @@
     <origin rpy="0 0 0" xyz="0.2 0.02 0.020" />
     <parent link="chassis"/>
     <child link="base_ir_front"/>
+</joint>
+
+<joint name="imu_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin rpy="0 1.57 0" xyz="0.1 0.02 0.05" />
+    <parent link="chassis"/>
+    <child link="imu_link"/>
 </joint>
 
  <joint type="continuous" name="left_wheel_hinge">
