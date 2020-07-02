@@ -10,3 +10,6 @@ Welcome to the rover branch , this branch is still in development!!
 
 ## Current Output
 
+1. IMU is working fine!
+2. RGBD Camera is working fine!
+3. Skid Drive is working fine!
