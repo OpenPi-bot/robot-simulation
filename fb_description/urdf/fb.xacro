@@ -66,7 +66,7 @@
         izz="1.0"/>
     </inertial>
   </link>
-  <link name="base_ir_front">
+  <link name="rgbd">
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -179,11 +179,11 @@
         izz="1.0"/>
     </inertial>
   </link>
- <joint name="ir_front_joint" type="fixed">
-    <axis xyz="0 1 0" />
+ <joint name="camera_joint" type="fixed">
+    <axis xyz="0 0 0" />
     <origin rpy="0 0 0" xyz="0.2 0.02 0.020" />
     <parent link="chassis"/>
-    <child link="base_ir_front"/>
+    <child link="rgbd"/>
 </joint>
 
 <joint name="imu_joint" type="fixed">
