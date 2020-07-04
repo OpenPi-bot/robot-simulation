@@ -9,4 +9,4 @@ Welcome to the sensor branch , this branch is still in development!!
 
 ## Current Output
 
-![output](current_otuput.png)
+![output](current_output.png)
