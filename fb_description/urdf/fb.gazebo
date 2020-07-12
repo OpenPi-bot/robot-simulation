@@ -96,14 +96,15 @@
     <rightRearJoint>right_wheel_hinge</rightRearJoint>
     <wheelSeparation>0.4</wheelSeparation>
     <wheelDiameter>0.15</wheelDiameter>
+    <odometryFrame>odom</odometryFrame>
     <robotBaseFrame>chassis</robotBaseFrame>
     <torque>20</torque>
     <topicName>cmd_vel</topicName>
-    <broadcastTF>false</broadcastTF>
+    <broadcastTF>true</broadcastTF>
   </plugin>
 </gazebo>
 
-<gazebo reference="imu_link">
+<!--gazebo reference="imu_link">
     <gravity>true</gravity>
     <sensor name="imu_sensor" type="imu">
       <always_on>true</always_on>
@@ -121,7 +122,7 @@
         <initialOrientationAsReference>false</initialOrientationAsReference>
       </plugin>
    </sensor>
-  </gazebo>
+  </gazebo-->
 
  <gazebo reference="chassis">
       <material>Gazebo/Blue</material>
