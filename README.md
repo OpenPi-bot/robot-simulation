@@ -6,18 +6,18 @@
 2. Then run catkin_make to compile all the packages
 3. To launch the gazebo simulation , go into the fb_gazebo folder
 4. Then run
-'''bash
+```
 roslaunch fb.launch
-'''
+```
 5. To launch the rviz simulation , open another terminal and , go into the fb_description folder
 6. Then go into the launch folder inside fb_description folder and run
-'''bash
+```
 roslaunch fb_rviz.launch
-'''
+```
 7. Now open another terminal and run
-'''bash
+```
 rostopic list
-'''
+```
 8. The above command is for verifying that you have compiled the simulation correctly!
 9. You will see camera topics , imu , and skid drive controller topics!
 10. Now you can test by publishing commands to the rover and testing!
