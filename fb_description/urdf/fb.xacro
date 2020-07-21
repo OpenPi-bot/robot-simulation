@@ -79,7 +79,7 @@
     <visual>
      <origin xyz="0 0 0" rpy="1.57 0 1.57"/>
       <geometry>
-       <mesh filename="/home/manan/catkin_ws/src/robot-simulation/fb_description/urdf/r200.dae"/>
+       <mesh filename="$(find fb_description)/urdf/r200.dae"/>
       </geometry>
     </visual>
     <collision>
